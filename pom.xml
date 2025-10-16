@@ -20,6 +20,8 @@
     <modules>
         <!-- 认证服务 -->
         <module>xiaohongshu-auth</module>
+        <!-- 平台基础框架 -->
+        <module>xiaohong-framework</module>
     </modules>
 
     <properties>
@@ -36,7 +38,7 @@
 
         <!-- 依赖包版本 -->
         <lombok.version>1.18.30</lombok.version>
-
+        <!-- 依赖包版本 -->
         <spring-boot.version>3.0.2</spring-boot.version>
         <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
@@ -79,6 +81,11 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>com.xiaohongshu</groupId>
+                <artifactId>xiaohong-common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

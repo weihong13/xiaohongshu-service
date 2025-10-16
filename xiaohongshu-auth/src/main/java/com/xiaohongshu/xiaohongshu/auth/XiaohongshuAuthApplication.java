@@ -1,4 +1,4 @@
-package com.xiaohongshu.xiaohongshuauth;
+package com.xiaohongshu.xiaohongshu.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

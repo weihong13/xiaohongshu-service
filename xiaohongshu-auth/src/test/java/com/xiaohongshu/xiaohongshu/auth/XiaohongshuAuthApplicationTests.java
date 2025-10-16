@@ -1,4 +1,4 @@
-package com.xiaohongshu.xiaohongshuauth;
+package com.xiaohongshu.xiaohongshu.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
