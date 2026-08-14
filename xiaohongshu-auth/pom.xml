@@ -5,7 +5,7 @@
 
     <!-- 指定父项目 -->
     <parent>
-        <groupId>com.xiaohongshu</groupId>
+        <groupId>com.guoshisan</groupId>
         <artifactId>xiaohongshu</artifactId>
         <version>${revision}</version>
     </parent>
@@ -18,12 +18,6 @@
     <description>小宏书：认证服务（负责处理用户登录、注册、账号注销等）</description>
 
     <dependencies>
-
-        <dependency>
-            <groupId>com.xiaohongshu</groupId>
-            <artifactId>xiaohong-common</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -35,10 +29,33 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- MySQL 驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- Druid 数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-3-starter</artifactId>
+        </dependency>
+
         <!-- 业务接口日志组件 -->
         <dependency>
-            <groupId>com.xiaohongshu</groupId>
-            <artifactId>xiaohong-spring-boot-starter-biz-operationlog</artifactId>
+            <groupId>com.guoshisan</groupId>
+            <artifactId>shisan-spring-boot-starter-biz-operationlog</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.guoshisan</groupId>
+            <artifactId>shisan-common</artifactId>
         </dependency>
 
     </dependencies>
@@ -48,6 +65,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- 代码生成器 -->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

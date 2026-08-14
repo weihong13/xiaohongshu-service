@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xiaohongshu</groupId>
+    <groupId>com.guoshisan</groupId>
     <artifactId>xiaohongshu</artifactId>
     <version>${revision}</version>
 
@@ -21,7 +21,7 @@
         <!-- 认证服务 -->
         <module>xiaohongshu-auth</module>
         <!-- 平台基础框架 -->
-        <module>xiaohong-framework</module>
+        <module>shisan-framework</module>
     </modules>
 
     <properties>
@@ -43,6 +43,11 @@
         <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
         <jackson.version>2.16.1</jackson.version>
+        <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
+        <mybatis-spring-boot.version>3.0.1</mybatis-spring-boot.version>
+        <druid.version>1.2.21</druid.version>
+        <mybatis-generator-maven-plugin.version>1.3.5</mybatis-generator-maven-plugin.version>
+
     </properties>
 
     <!-- 统一依赖管理 -->
@@ -82,12 +87,6 @@
                 <scope>import</scope>
             </dependency>
 
-            <dependency>
-                <groupId>com.xiaohongshu</groupId>
-                <artifactId>xiaohong-common</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-
             <!-- Jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -101,10 +100,37 @@
                 <version>${jackson.version}</version>
             </dependency>
 
+            <!-- Mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot.version}</version>
+            </dependency>
+
+            <!-- MySQL 驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <!-- Druid 数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-3-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
             <!-- 业务接口日志组件 -->
             <dependency>
-                <groupId>com.xiaohongshu</groupId>
-                <artifactId>xiaohong-spring-boot-starter-biz-operationlog</artifactId>
+                <groupId>com.guoshisan</groupId>
+                <artifactId>shisan-spring-boot-starter-biz-operationlog</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guoshisan</groupId>
+                <artifactId>shisan-common</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
@@ -115,6 +141,27 @@
         <!-- 统一插件管理 -->
         <pluginManagement>
             <plugins>
+                <!-- 代码生成器 -->
+                <plugin>
+                    <groupId>org.mybatis.generator</groupId>
+                    <artifactId>mybatis-generator-maven-plugin</artifactId>
+                    <version>${mybatis-generator-maven-plugin.version}</version>
+                    <configuration>
+                        <!-- 允许移动生成的文件 -->
+                        <verbose>true</verbose>
+                        <!-- 允许覆盖生成的文件 -->
+                        <overwrite>true</overwrite>
+                    </configuration>
+                    <!-- 此插件需要连接数据库，所以需要依赖 MySQL 驱动 -->
+                    <dependencies>
+                        <dependency>
+                            <groupId>mysql</groupId>
+                            <artifactId>mysql-connector-java</artifactId>
+                            <version>${mysql-connector-java.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
