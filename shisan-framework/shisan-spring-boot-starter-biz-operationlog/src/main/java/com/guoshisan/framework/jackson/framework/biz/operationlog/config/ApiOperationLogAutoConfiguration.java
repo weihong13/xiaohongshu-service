@@ -1,6 +1,6 @@
-package com.guoshisan.framework.biz.operationlog.config;
+package com.guoshisan.framework.jackson.framework.biz.operationlog.config;
 
-import com.guoshisan.framework.biz.operationlog.aspect.ApiOperationLogAspect;
+import com.guoshisan.framework.jackson.framework.biz.operationlog.aspect.ApiOperationLogAspect;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
 

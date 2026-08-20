@@ -14,7 +14,7 @@
   <!-- 多模块项目需要配置打包方式为 pom -->
   <packaging>pom</packaging>
 
-    <artifactId>xiaohong-framework</artifactId>
+    <artifactId>shisan-framework</artifactId>
     <name>${project.artifactId}</name>
     <description>平台基础设施层：封装一些常用功能，供各个业务线拿来即用</description>
 

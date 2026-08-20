@@ -1,11 +1,11 @@
 package com.guoshisan.xiaohongshu.auth.controller;
 
-import com.guoshisan.framework.biz.operationlog.aspect.ApiOperationLog;
+import com.guoshisan.framework.jackson.framework.biz.operationlog.aspect.ApiOperationLog;
 import com.guoshisan.framework.common.response.Response;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.time.LocalDateTime;
 
 /**
  * @author: GHW
@@ -22,13 +22,10 @@ public class TestController {
         return Response.success("Hello, 小宏书专栏");
     }
 
-    @GetMapping("/test2")
+    @PostMapping("/test2")
     @ApiOperationLog(description = "测试接口2")
-    public Response<User> test2() {
-        return Response.success(User.builder()
-                .nickName("陈十一")
-                .createTime(LocalDateTime.now())
-                .build());
+    public Response<User> test2(@RequestBody User user) {
+        return Response.success(user);
     }
 }
 

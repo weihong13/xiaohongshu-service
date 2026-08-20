@@ -1,4 +1,4 @@
-package com.guoshisan.framework.biz.operationlog.aspect;
+package com.guoshisan.framework.jackson.framework.biz.operationlog.aspect;
 
 import java.lang.annotation.*;
 

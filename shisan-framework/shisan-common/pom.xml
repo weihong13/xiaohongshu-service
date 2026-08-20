@@ -4,8 +4,8 @@
     <!-- 指定父项目 -->
     <parent>
         <groupId>com.guoshisan</groupId>
-        <artifactId>xiaohong-framework</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>shisan-framework</artifactId>
+        <version>${revision}</version>
     </parent>
 
      <!-- 指定打包方式 -->
