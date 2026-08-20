@@ -59,6 +59,12 @@
             <artifactId>shisan-spring-boot-starter-jackson</artifactId>
         </dependency>
 
+        <!-- Sa-Token 权限认证 -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot3-starter</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.guoshisan</groupId>
             <artifactId>shisan-common</artifactId>

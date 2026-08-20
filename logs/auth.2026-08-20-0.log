@@ -575,3 +575,18 @@ java.lang.ArithmeticException: / by zero
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2026-08-20 21:40:28.048 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
 2026-08-20 21:40:28.055 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-08-20 21:40:33.793 [main] INFO  c.g.xiaohongshu.auth.XiaohongshuAuthApplication - Starting XiaohongshuAuthApplication using Java 17.0.14 with PID 16452 (E:\GitHub\xiaohongshu\xiaohongshu-auth\target\classes started by Administrator in E:\GitHub\xiaohongshu)
+2026-08-20 21:40:33.795 [main] INFO  c.g.xiaohongshu.auth.XiaohongshuAuthApplication - The following 1 profile is active: "dev"
+2026-08-20 21:40:34.745 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-08-20 21:40:34.753 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-20 21:40:34.753 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-08-20 21:40:34.837 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-20 21:40:34.837 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1002 ms
+2026-08-20 21:40:35.288 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-08-20 21:40:35.540 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-08-20 21:40:35.802 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-08-20 21:40:35.811 [main] INFO  c.g.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 2.667 seconds (process running for 3.163)
+2026-08-20 21:40:46.879 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-20 21:40:46.879 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-20 21:40:46.881 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-08-20 21:40:46.959 [http-nio-8080-exec-1] WARN  o.s.core.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.guoshisan.xiaohongshu.auth.controller.TestController
