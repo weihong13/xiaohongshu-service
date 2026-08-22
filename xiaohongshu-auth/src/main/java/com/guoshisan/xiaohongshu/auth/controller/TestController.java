@@ -1,7 +1,7 @@
 package com.guoshisan.xiaohongshu.auth.controller;
 
 import cn.dev33.satoken.stp.StpUtil;
-import com.guoshisan.framework.jackson.framework.biz.operationlog.aspect.ApiOperationLog;
+import com.guoshisan.framework.biz.operationlog.aspect.ApiOperationLog;
 import com.guoshisan.framework.common.response.Response;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

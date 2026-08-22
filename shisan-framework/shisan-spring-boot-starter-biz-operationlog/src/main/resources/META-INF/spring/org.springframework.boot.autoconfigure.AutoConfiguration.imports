@@ -1,1 +1,1 @@
-com.guoshisan.framework.jackson.framework.biz.operationlog.config.ApiOperationLogAutoConfiguration
+com.guoshisan.framework.biz.operationlog.config.ApiOperationLogAutoConfiguration
