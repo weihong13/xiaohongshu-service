@@ -5,11 +5,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.guoshisan.xiaohongshu.auth.mapper")
+@MapperScan("com.guoshisan.xiaohongshu.auth.mapper")  // 添加这行
 public class XiaohongshuAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(XiaohongshuAuthApplication.class, args);
+
+        SpringApplication.run(
+                XiaohongshuAuthApplication.class,
+                args
+        );
     }
 
 }

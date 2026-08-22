@@ -59,3 +59,5 @@ aliyun: # 接入阿里云（发送短信使用）
 logging:
   level:
     com.guoshisan.xiaohongshu.auth.domain.mapper: debug
+
+debug: false

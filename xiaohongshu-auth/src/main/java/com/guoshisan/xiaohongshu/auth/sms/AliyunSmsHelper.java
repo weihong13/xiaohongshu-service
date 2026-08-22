@@ -7,8 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
- * @Author: 犬小哈
- * @Date: 2025/10/12 17:43
+ * @Author: 郭拾叁
+ * @Date: 2026/6/12 17:43
  * @Version: v1.0.0
  * @Description: 短信发送工具类
  **/

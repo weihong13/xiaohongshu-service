@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Author: 犬小哈
- * @Date: 2025/10/12 17:29
+ * @Author: 郭拾叁
+ * @Date: 2026/8/12 17:29
  * @Version: v1.0.0
  * @Description: 短信发送客户端
  **/
