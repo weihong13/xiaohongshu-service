@@ -23,6 +23,17 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 密码加密 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>transmittable-thread-local</artifactId>
+        </dependency>
+
         <!-- 服务注册发现 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -75,6 +86,12 @@
         <dependency>
             <groupId>com.guoshisan</groupId>
             <artifactId>shisan-spring-boot-starter-biz-operationlog</artifactId>
+        </dependency>
+
+        <!-- 上下文组件 -->
+        <dependency>
+            <groupId>com.guoshisan</groupId>
+            <artifactId>shisan-spring-boot-starter-biz-context</artifactId>
         </dependency>
 
         <!-- 业务接口日志组件 -->

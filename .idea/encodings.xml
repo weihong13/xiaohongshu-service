@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/shisan-framework/shisan-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shisan-framework/shisan-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shisan-framework/shisan-spring-boot-starter-biz-context/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shisan-framework/shisan-spring-boot-starter-biz-context/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shisan-framework/shisan-spring-boot-starter-biz-operationlog/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shisan-framework/shisan-spring-boot-starter-biz-operationlog/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shisan-framework/shisan-spring-boot-starter-jackson/src/main/java" charset="UTF-8" />
@@ -13,5 +15,7 @@
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xiaohongshu-auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xiaohongshu-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xiaohongshu-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xiaohongshu-gateway/src/main/resources" charset="UTF-8" />
   </component>
 </project>

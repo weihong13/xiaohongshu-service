@@ -21,7 +21,9 @@
         <!-- 认证服务 -->
         <module>xiaohongshu-auth</module>
         <!-- 平台基础框架 -->
-        <module>shisan-framework</module><module>shisan-framework/shisan-spring-boot-starter-jackson</module>
+        <module>shisan-framework</module>
+        <module>shisan-framework/shisan-spring-boot-starter-jackson</module>
+        <module>xiaohongshu-gateway</module>
     </modules>
 
     <properties>
@@ -54,11 +56,18 @@
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <dypnsapi.version>2.0.0</dypnsapi.version>
         <nacos-config.version>0.3.0-RC</nacos-config.version>
+        <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
     </properties>
 
     <!-- 统一依赖管理 -->
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
 
             <!-- Nacos 配置中心 -->
             <dependency>
@@ -102,6 +111,12 @@
             <dependency>
                 <groupId>cn.dev33</groupId>
                 <artifactId>sa-token-spring-boot3-starter</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-reactor-spring-boot3-starter</artifactId>
                 <version>${sa-token.version}</version>
             </dependency>
 
@@ -178,6 +193,13 @@
                 <groupId>com.guoshisan</groupId>
                 <artifactId>shisan-spring-boot-starter-biz-operationlog</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <!-- 上下文组件 -->
+            <dependency>
+                <groupId>com.guoshisan</groupId>
+                <artifactId>shisan-spring-boot-starter-biz-context</artifactId>
+                <version>${revision}</version>
             </dependency>
 
             <!-- 业务接口日志组件 -->

@@ -1,4 +1,4 @@
-package com.guoshisan.xiaohongshu.auth.constant;
+package com.guoshisan.xiaohongshu.gateway.constant;
 
 /**
  * @author: 郭拾叁
@@ -12,7 +12,6 @@ public class RedisKeyConstants {
      * 验证码 KEY 前缀
      */
     private static final String VERIFICATION_CODE_KEY_PREFIX = "verification_code:";
-
 
     /**
      * 角色对应的权限集合 KEY 前缀

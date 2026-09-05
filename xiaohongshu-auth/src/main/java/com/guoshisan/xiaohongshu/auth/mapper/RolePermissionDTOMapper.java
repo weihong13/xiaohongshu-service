@@ -1,7 +1,7 @@
 package com.guoshisan.xiaohongshu.auth.mapper;
 
 import com.guoshisan.xiaohongshu.auth.domain.dto.RolePermissionDTO;
-import io.lettuce.core.dynamic.annotation.Param;
+import org.apache.ibatis.annotations.Param;  // ✅ 正确
 
 import java.util.List;
 

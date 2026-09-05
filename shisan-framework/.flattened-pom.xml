@@ -16,5 +16,6 @@
   <modules>
     <module>shisan-common</module>
     <module>shisan-spring-boot-starter-biz-operationlog</module>
+    <module>shisan-spring-boot-starter-biz-context</module>
   </modules>
 </project>

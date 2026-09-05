@@ -1,4 +1,4 @@
-package com.guoshisan.framework.common.eumns;
+package com.guoshisan.framework.common.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
