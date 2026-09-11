@@ -13,8 +13,8 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 
 /**
- * @author: 犬小哈
- * @date: 2024/4/15 14:01
+ * @author: 郭拾叁
+ * @date: 2025/4/15 14:01
  * @version: v1.0.0
  * @description: 提取请求头中的用户 ID 保存到上下文中，以方便后续使用
  **/

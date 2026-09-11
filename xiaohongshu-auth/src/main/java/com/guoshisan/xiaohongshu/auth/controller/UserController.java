@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
  * @description: TODO
  **/
 @RestController
-@RequestMapping("/user")
+//@RequestMapping("/user")
 @Slf4j
 public class UserController {
 

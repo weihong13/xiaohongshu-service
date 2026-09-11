@@ -25,6 +25,7 @@
         <module>shisan-framework/shisan-spring-boot-starter-jackson</module>
         <module>xiaohongshu-gateway</module>
         <module>xiaohongshu-oss</module>
+        <module>xiaohongshu-user</module>
     </modules>
 
     <properties>

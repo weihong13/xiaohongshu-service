@@ -38,8 +38,8 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 /**
- * @author: 犬小哈
- * @date: 2024/4/7 15:41
+ * @author: 郭拾叁
+ * @date: 2025/4/7 15:41
  * @version: v1.0.0
  * @description: TODO
  **/
@@ -220,7 +220,7 @@ public class UserServiceImpl implements IUserService {
     private Long registerUser(String phone) {
         return transactionTemplate.execute(status -> {
             try {
-                // 获取全局自增的小哈书 ID
+                // 获取全局自增的小宏书 ID
                 Long xiaohongshuId = redisTemplate.opsForValue().increment(RedisKeyConstants.XIAOHONGSHU_ID_GENERATOR_KEY);
 
                 UserDTO userDO = UserDTO.builder()
