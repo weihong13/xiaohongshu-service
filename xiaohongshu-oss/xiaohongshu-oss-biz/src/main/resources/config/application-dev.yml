@@ -3,15 +3,15 @@
 #=================================================================
 storage:
   minio:
-    endpoint: http://127.0.0.1:9000
+    endpoint: http://127.0.0.1:9001
     bucketName: xiaohongshu
-    accessKey: admin123
-    secretKey: admin123
+    accessKey: ${MINIO_ACCESS_KEY}
+    secretKey: ${MINIO_SECRET_KEY}
   aliyun-oss:
     # OSS 服务的访问域名，请根据实际使用的 OSS 区域替换为对应的 endpoint
     endpoint: oss-cn-beijing.aliyuncs.com # 改成你自己的
     bucketName: xiao-hong-shu-0925
     # 阿里云账号的 AccessKey ID，用于身份验证
-    accessKey: YOUR_ACCESS_KEY_ID # 改成你自己的
+    accessKey: ${OSS_ACCESS_KEY_ID} # 改成你自己的
     # 阿里云账号的 AccessKey Secret，用于身份验证
-    secretKey: YOUR_ACCESS_KEY_SECRET # 改成你自己的
+    secretKey: ${OSS_ACCESS_KEY_SECRET} # 改成你自己的
