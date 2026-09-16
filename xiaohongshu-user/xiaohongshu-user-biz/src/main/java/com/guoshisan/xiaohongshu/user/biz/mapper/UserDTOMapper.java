@@ -9,6 +9,13 @@ public interface UserDTOMapper {
 
     int insertSelective(UserDTO record);
 
+    /**
+     * 根据手机号查询记录
+     * @param phone
+     * @return
+     */
+    UserDTO selectByPhone(String phone);
+
     UserDTO selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(UserDTO record);

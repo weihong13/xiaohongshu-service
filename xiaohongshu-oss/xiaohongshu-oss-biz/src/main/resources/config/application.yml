@@ -4,6 +4,10 @@ server:
 spring:
   profiles:
     active: dev # 默认激活 dev 本地开发环境
+  servlet:
+    multipart:
+      max-file-size: 50MB        # 单个文件最大
+      max-request-size: 100MB    # 整个请求最大（多文件时用）
 
 storage:
   type: minio # 对象存储类型

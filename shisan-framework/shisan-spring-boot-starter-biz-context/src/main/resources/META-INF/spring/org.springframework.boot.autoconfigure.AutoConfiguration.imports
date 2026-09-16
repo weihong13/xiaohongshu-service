@@ -1,1 +1,3 @@
 com.guoshisan.framework.biz.context.config.ContextAutoConfiguration
+com.guoshisan.framework.biz.context.config.FeignContextAutoConfiguration
+

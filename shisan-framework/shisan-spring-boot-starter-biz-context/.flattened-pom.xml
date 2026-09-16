@@ -18,6 +18,10 @@
   </properties>
   <dependencies>
     <dependency>
+      <groupId>io.github.openfeign</groupId>
+      <artifactId>feign-core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>${jackson.version}</version>

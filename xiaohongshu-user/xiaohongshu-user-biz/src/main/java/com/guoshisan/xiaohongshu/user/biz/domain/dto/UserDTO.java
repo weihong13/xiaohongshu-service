@@ -31,7 +31,7 @@ public class UserDTO {
 
     private Integer sex;
 
-    private Byte status;
+    private Integer status;
 
     private String introduction;
 
