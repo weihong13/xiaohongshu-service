@@ -26,6 +26,7 @@
         <module>xiaohongshu-gateway</module>
         <module>xiaohongshu-oss</module>
         <module>xiaohongshu-user</module>
+        <module>xiaohongshu-kv</module>
     </modules>
 
     <properties>
@@ -73,6 +74,11 @@
     <!-- 统一依赖管理 -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.guoshisan</groupId>
+                <artifactId>xiaohongshu-kv-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <dependency>
                 <groupId>com.guoshisan</groupId>
                 <artifactId>xiaohongshu-user-api</artifactId>
