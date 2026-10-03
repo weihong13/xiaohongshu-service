@@ -20,6 +20,7 @@ import com.guoshisan.xiaohongshu.user.biz.enums.ResponseCodeEnum;
 import com.guoshisan.xiaohongshu.user.biz.enums.SexEnum;
 import com.guoshisan.xiaohongshu.user.biz.mapper.UserRoleDTOMapper;
 import com.guoshisan.xiaohongshu.user.biz.model.vo.UpdateUserInfoReqVO;
+import com.guoshisan.xiaohongshu.user.biz.rpc.DistributedIdGeneratorRpcService;
 import com.guoshisan.xiaohongshu.user.biz.rpc.OssRpcService;
 import com.guoshisan.xiaohongshu.user.biz.service.IUserService;
 import com.guoshisan.xiaohongshu.user.dto.req.FindUserByPhoneReqDTO;
@@ -65,6 +66,10 @@ public class UserServiceImpl implements IUserService {
     private RoleDTOMapper roleDOMapper;
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
+
+    @Resource
+    private DistributedIdGeneratorRpcService distributedIdGeneratorRpcService;
+
 
     /**
      * 更新用户信息
@@ -181,11 +186,20 @@ public class UserServiceImpl implements IUserService {
 
         // 否则注册新用户
         // 获取全局自增的小哈书 ID
-        Long xiaohongshuId = redisTemplate.opsForValue().increment(RedisKeyConstants.XIAOHONGSHU_ID_GENERATOR_KEY);
+//        Long xiaohongshuId = redisTemplate.opsForValue().increment(RedisKeyConstants.XIAOHONGSHU_ID_GENERATOR_KEY);
+
+        // RPC: 调用分布式 ID 生成服务生成小哈书 ID
+        String xiaohongshuId = distributedIdGeneratorRpcService.getXiaohongshuId();
+
+        // RPC: 调用分布式 ID 生成服务生成用户 ID
+        String userIdStr = distributedIdGeneratorRpcService.getUserId();
+        Long userId = Long.valueOf(userIdStr);
+
 
         UserDTO userDO = UserDTO.builder()
+                .id(userId)
                 .phone(phone)
-                .xiaohongshuId(String.valueOf(xiaohongshuId)) // 自动生成小红书号 ID
+                .xiaohongshuId(xiaohongshuId) // 自动生成小红书号 ID
                 .nickname("小红薯" + xiaohongshuId) // 自动生成昵称, 如：小红薯10000
                 .status(StatusEnum.ENABLE.getValue()) // 状态为启用
                 .createTime(LocalDateTime.now())
@@ -197,7 +211,7 @@ public class UserServiceImpl implements IUserService {
         userDTOMapper.insert(userDO);
 
         // 获取刚刚添加入库的用户 ID
-        Long userId = userDO.getId();
+//        Long userId = userDO.getId();
 
         // 给该用户分配一个默认角色
         UserRoleDTO userRoleDO = UserRoleDTO.builder()

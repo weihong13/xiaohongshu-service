@@ -6,7 +6,7 @@
 
     <groupId>com.guoshisan</groupId>
     <artifactId>xiaohongshu</artifactId>
-    <version>${revision}</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <!-- 项目名称 -->
     <name>${project.artifactId}</name>
@@ -26,7 +26,7 @@
         <module>xiaohongshu-gateway</module>
         <module>xiaohongshu-oss</module>
         <module>xiaohongshu-user</module>
-        <module>xiaohongshu-kv</module>
+        <module>xiaohongshu-kv</module><module>xiaohongshu-distributed-id-generator</module>
     </modules>
 
     <properties>
@@ -74,6 +74,11 @@
     <!-- 统一依赖管理 -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.guoshisan</groupId>
+                <artifactId>xiaohongshu-distributed-id-generator-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <dependency>
                 <groupId>com.guoshisan</groupId>
                 <artifactId>xiaohongshu-kv-api</artifactId>
@@ -305,7 +310,7 @@
                         <dependency>
                             <groupId>mysql</groupId>
                             <artifactId>mysql-connector-java</artifactId>
-                            <version>${mysql-connector-java.version}</version>
+                            <version>${mysql-connector-j.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>

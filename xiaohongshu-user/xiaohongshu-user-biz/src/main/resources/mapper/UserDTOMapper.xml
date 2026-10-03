@@ -36,7 +36,11 @@
     delete from t_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.guoshisan.xiaohongshu.user.biz.domain.dto.UserDTO">
+
+  <insert id="insert" parameterType="com.guoshisan.xiaohongshu.user.biz.domain.dto.UserDTO"
+          useGeneratedKeys="true"
+          keyProperty="id"
+          keyColumn="id">
     insert into t_user (id, xiaohongshu_id, `password`, 
       nickname, avatar, birthday, 
       background_img, phone, sex, 
@@ -48,6 +52,7 @@
       #{status,jdbcType=TINYINT}, #{introduction,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP}, #{isDeleted,jdbcType=BIT})
   </insert>
+
   <insert id="insertSelective" parameterType="com.guoshisan.xiaohongshu.user.biz.domain.dto.UserDTO">
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
