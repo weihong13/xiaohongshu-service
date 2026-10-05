@@ -17,6 +17,11 @@
     <description>用户服务业务模块</description>
 
     <dependencies>
+        <!-- Caffeine 本地缓存 -->
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.guoshisan</groupId>
             <artifactId>xiaohongshu-distributed-id-generator-api</artifactId>
